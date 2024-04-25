@@ -7,6 +7,7 @@ import time
 driver = webdriver.Chrome()
 
 try:
+    driver.maximize_window()
     driver.get("https://alnafi.com")
     login_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'btn-light') and contains(text(), 'Login')]"))
